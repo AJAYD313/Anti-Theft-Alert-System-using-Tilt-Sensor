@@ -1,60 +1,70 @@
-# Anti-Theft-Alert-System-using-Tilt-Sensor
 
-## Aim: To measure the tilt Sensor using SW200D with Arduino UNO Board/ESP-32 using Tinker CAD.
+# Aim:
+To develop the Anti Teft Alert system using IOT
+# Hardware / Software Tools required:
+PC/ Laptop with Internet connection
+Tinker CAD tool (Online)
+Arduino UNO 
+Board/ESP-32
+Photoresistor
+# Circuit Diagram:
+<img width="1008" height="540" alt="564707287-85d94048-ed87-4d1c-ab46-04990b306a32" src="https://github.com/user-attachments/assets/0dd8664c-3def-4b16-8771-b9ad882a5743" />
 
-## Hardware / Software Tools required:
-	PC/ Laptop with Internet connection
-  Tinker CAD tool (Online)
-	Arduino UNO Board/ESP-32
-	Tilt sensor(SW200D)
+# Theory :
+The Arduino Uno is powered by the ATmega328P, an 8-bit microcontroller that runs at 16 MHz. It has 32 KB of flash memory, 2 KB of SRAM, and 1 KB of EEPROM. The board has 14 digital I/O pins (of which 6 can be used as PWM outputs) and 6 analog input pins. These pins allow the board to interface with various sensors, actuators, and other devices.The Arduino Uno can be powered via a USB connection or an external power supply. The board has a built-in voltage regulator to manage power from 7 to 12 volts. The board is programmable using the Arduino IDE (Integrated Development Environment), which supports a simplified version of C/C++. The code, known as a "sketch," is uploaded to the board via a USB connection. The Uno has a USB-B port, which is used for communication with a computer. The USB connection also powers the board when connected. The board includes a reset button that restarts the microcontroller, useful during programming and troubleshooting. The In-Circuit Serial Programming (ICSP) header allows for low-level programming of the microcontroller or firmware updates. The Uno has a built-in LED on pin 13, commonly used for simple tests and debugging.
 
-## Circuit Diagram:
- 
-## Theory :
- The Arduino Uno is powered by the ATmega328P, an 8-bit microcontroller that runs at 16 MHz. It has 32 KB of flash memory, 2 KB of SRAM, and 1 KB of EEPROM. The board has 14 digital I/O pins (of which 6 can be used as PWM outputs) and 6 analog input pins. These pins allow the board to interface with various sensors, actuators, and other devices.The Arduino Uno can be powered via a USB connection or an external power supply. The board has a built-in voltage regulator to manage power from 7 to 12 volts.
-The board is programmable using the Arduino IDE (Integrated Development Environment), which supports a simplified version of C/C++. The code, known as a "sketch," is uploaded to the board via a USB connection. The Uno has a USB-B port, which is used for communication with a computer. The USB connection also powers the board when connected. The board includes a reset button that restarts the microcontroller, useful during programming and troubleshooting. The In-Circuit Serial Programming (ICSP) header allows for low-level programming of the microcontroller or firmware updates. The Uno has a built-in LED on pin 13, commonly used for simple tests and debugging.
+# Procedure:
+Step 1:
+Set Up the Tinkercad Environment
+• Log in to Tinkercad: Open Tinkercad in your web browser and log in to your account. • Create a New Circuit: In the Tinkercad dashboard, click on "Circuits" and then select "Create New Circuit."
 
+Step 2:
+Add Components to the Circuit
+• Arduino Uno: Drag an Arduino Uno board from the components panel onto the workspace. • LDR Sensor: Search for the Photoresistor in the components panel and drag it into the workspace. • Breadboard: Drag a small breadboard to the workspace to help with wiring connections. • Resistor (Optional): A resistor may not be necessary for this simple setup, but you can include it for more accurate readings. • Wires: Use wires to connect the components.
 
-## Procedure:
+Step 3:
+Connect the LDR Sensor to the Arduino
+• LDR Sensor Pins: The LDR has two terminals (pins). • One LDR Pin to 5V: Connect one terminal of the LDR to the Arduino 5V pin. • Other LDR Pin to Analog Input and Resistor: o Connect the other terminal of the LDR to one end of a fixed resistor (e.g., 10kΩ). o Also connect this same LDR terminal to an Arduino analog input pin (e.g., A1). • Resistor to GND: Connect the other end of the resistor to the Arduino GND pin. • Breadboard Setup (Optional): o Place the LDR and resistor on the breadboard forming a voltage divider between 5V and GND. o The middle point (between LDR and resistor) connects to the Arduino analog input pin.
 
-Step 1: Set Up the Tinkercad Environment
-•	Log in to Tinkercad: Open Tinkercad in your web browser and log in to your account.
-•	Create a New Circuit: In the Tinkercad dashboard, click on "Circuits" and then select "Create New Circuit."
-Step 2: Add Components to the Circuit
-•	Arduino Uno: Drag an Arduino Uno board from the components panel onto the workspace.
-•	SW200D Sensor: Search for the SW200D sensor in the components panel and drag it into the workspace.
-•	Breadboard: Drag a small breadboard to the workspace to help with wiring connections.
-•	Resistor (Optional): A resistor may not be necessary for this simple setup, but you can include it for more accurate readings.
-•	Wires: Use wires to connect the components.
-
-Step 3: Connect the Tilt Sensor (SW-200D) to Arduino:
-•	SW200D Vout (Middle Pin) to Arduino Digital Pin (e.g., D2): Use a wire to connect the middle pin (Vout) of the tilt sensor to a digital input pin on the Arduino.
-•	SW200D GND (One Side Pin) to Breadboard GND Rail: Connect one side pin of the tilt sensor to the ground rail of the breadboard.
-•	SW200D VCC (Other Side Pin) to Breadboard 5V Rail: Connect the other side pin of the tilt sensor to the 5V rail of the breadboard.
 Step 4: Write the Arduino Code
-•	Code Editor: Click on the "Code" button at the top of the Tinkercad workspace to open the code editor.
-•	Set the Coding Mode: Ensure the editor is in "Text" mode to write your code in C/C++.
-•	Enter the Code: Write the following code from the SW200D sensor:
+• Code Editor: Click on the "Code" button at the top of the Tinkercad workspace to open the code editor. • Set the Coding Mode: Ensure the editor is in "Text" mode to write your code in C/C++. • Enter the Code: Write the following code from the photoresistor
+
 Step 5: Simulate the Circuit
-•	Start Simulation: Click the "Start Simulation" button at the top of the workspace to run the circuit and code.
-•	Monitor Output: Open the serial monitor by clicking the "Serial Monitor" button 
+• Start Simulation: Click the "Start Simulation" button at the top of the workspace to run the circuit and code. • Monitor Output: Open the serial monitor by clicking the "Serial Monitor" button to view the temperature readings in both Celsius and Fahrenheit.
+
 Step 6: Troubleshoot and Refine
-•	Check Connections: Ensure that all connections are made correctly on the breadboard and the Arduino.
-•	Adjust Code: If needed, tweak the code to improve accuracy or change the format of the output.
+• Check Connections: Ensure that all connections are made correctly on the breadboard and the Arduino. • Adjust Code: If needed, tweak the code to improve accuracy or change the format of the output.
+
 Step 7: Save Your Work
-•	Stop Simulation: Click "Stop Simulation" to end the simulation.
-•	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
+• Stop Simulation: Click "Stop Simulation" to end the simulation. • Save the Circuit: Click "Save" to keep your circuit design and code for future use.
 
-## Code:
+# Code:
+const int LEDPin=13;
+const int LDRPin=A0;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(LEDPin,OUTPUT);
+  pinMode(LDRPin,INPUT);
+}
+void loop()
+{
+  int LDRStatus=analogRead(LDRPin);
+  if(LDRStatus<=500)
+  {
+    digitalWrite(LEDPin,HIGH);
+    Serial.print("Current Light Intensity Value is -");
+    Serial.println(LDRStatus);
+  }
+  else
+  {
+    digitalWrite(LEDPin, LOW);
+    Serial.print("Current Light Intensity Value is -");
+    Serial.println(LDRStatus);
+  }
+}
+# Output:
+<img width="972" height="705" alt="564707804-85efde2f-6d45-4426-baa2-f2eb16385350" src="https://github.com/user-attachments/assets/fefbbfd8-049d-430e-9f28-72ecb6fc8e82" />
 
-
-
-## Output:
-
- 
-
-
-## Result:
-
-Result: Thus measure the Tilt Sensor using SW200D with Arduino UNO Board/ESP-32 using Tinker CAD has been Verified Successfully.
-
+# Result:
+Thus measure the LDR Sensor using Photoresistor with Arduino UNO Board/ESP-32 using Tinker CAD has been Verified Successfully.
